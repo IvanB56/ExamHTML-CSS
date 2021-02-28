@@ -1,5 +1,6 @@
-header{
-  max-height: 16vh;
+@import url('navigation.css');
+header.container{
+  max-height: 230px;
 }
 
 .top-header{
@@ -85,4 +86,81 @@ header{
 .block-nav a:hover{
   color: #fff;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px){
+  .top-header{
+    grid-template-columns: .5fr 3.5fr 8fr;
+    height: 100px;
+  }
+  .logo>img{
+    width: 128px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px){
+  .top-header-nav{
+    display: none;
+  }
+  .top-header{
+    grid-template-rows: 1fr;
+    height: 54px;
+    margin-top: 10px;
+  }
+  .logo{
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .logo>img{
+    height: 54px;
+    max-width: 86px;
+  }
+  .block-nav{
+    grid-row-start: 1;
+  }
+  .empty{
+    grid-row-start: 1;
+  }
+  .block-nav a{
+    font-size: 12px;
+  }
+  .block-nav a>img{
+    height: 14px;
+  }
+}
+@media screen and (max-width: 576px){
+  .top-header{
+    grid-template-rows: 1fr;
+    height: 54px;
+    margin-top: 10px;
+  }
+  .top-header-nav{
+    display: none;
+  }
+  .empty{
+    grid-row-start: 1;
+  }
+  .logo{
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .logo>img{
+    height: 54px;
+    width: 85.8px;
+  }
+  .block-nav{
+    grid-row-start: 1;
+  }
+  .block-nav a{
+    font-size: 12px;
+  }
+  .block-nav a>img{
+    height: 14px;
+  }
+  nav.navbar{
+    height: 50px;
+  }
+  .block-nav{
+      grid-template-columns: 1fr 1fr 1.4fr 1.4fr;
+      gap: 2px;
+  }
 }
