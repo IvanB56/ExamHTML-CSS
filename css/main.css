@@ -43,6 +43,9 @@
   line-height: 1.2;
   box-sizing: border-box;
 }
+.women-text{
+  width: 60%;
+}
 .products a{
   position: absolute;
   top: 0;
