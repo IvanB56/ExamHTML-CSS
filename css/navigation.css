@@ -5,7 +5,7 @@
 
 nav{
   background-color: #05aecc;
-  margin-top: 15px;
+  margin-top: 1rem;
   height: 70px;
 }
 .my-navbar{
@@ -41,8 +41,9 @@ nav{
   top: 75px;
   box-shadow: 0 0 16px 0 #00000033;
   box-sizing: border-box;
-  padding: 0 15px;
-  background-color: rgba(255, 255, 255, 0.33);
+  padding: 0 1rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 5;
 }
 .my-dropdown:nth-of-type(1n + 7)>ul{
   right: 0;
@@ -64,13 +65,13 @@ nav{
   grid-template-columns: 3fr 8fr;
   border-bottom: 1px solid #cacaca;
   text-transform: capitalize;
-  padding-top: 15px;
-  padding-bottom: 5px;
+  padding-top: 1rem;
+  padding-bottom: .35rem;
 }
 .sub-nav>img{
   grid-row: 1 / 4;
   grid-column-start: 1;
-  margin-right: 5px;
+  margin-right: .35rem;
   align-self: center;
 }
 .sub-nav>h3{
@@ -98,6 +99,7 @@ nav{
 nav.navbar{
   display: none;
   position: relative;
+  z-index: 6;
 }
 .navbar>ul{
   display: none;
@@ -130,7 +132,7 @@ nav.navbar{
   }
   .my-navbar a{
     font-size: 0.9em;
-    padding: 0 15px;
+    padding: 0 1rem;
   }
   .my-navbar.d-flex{
     justify-content: space-between;
@@ -153,7 +155,7 @@ nav.navbar{
   }
   .my-navbar a{
     font-size: 0.9em;
-    padding: 0 5px;
+    padding: 0 .35rem;
   }
   .my-navbar.d-flex{
     justify-content: space-between;

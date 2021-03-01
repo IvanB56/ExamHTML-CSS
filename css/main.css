@@ -4,19 +4,23 @@
   grid-template-columns: 6.8fr 5.2fr;
   grid-template-rows: 1.2fr 0.9fr 0.6fr 1.2fr;
   padding: 0;
-  grid-gap: 5px;
+  grid-gap: .35rem;
   justify-content: center;
   align-items: center;
     /* TODO: удалить бэкграунд */
   background-color: silver;
 }
-.container h3{
+.container h5{
   font-family: 'Bodoni Moda', serif;
   text-transform: uppercase;
-  font-size: 3em;
+  font-size: 2rem;
   font-weight: bold;
   color: #ef5966;
   text-align: justify;
+}
+.products>div{
+  height: 100%;
+  width: 100%;
 }
 .men{
   position: relative;
@@ -27,34 +31,58 @@
 }
 .men>img{
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-.men-text{
+.men-text,
+.women-text{
   position: absolute;
   bottom: 10px;
   width: 50%;
   color: #fff;
-  line-height: 1;
+  line-height: 1.2;
   box-sizing: border-box;
 }
-.men-text>div:first-of-type{
+.products a{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+.products a:hover{
+  background-color: #0000008a;
+}
+.men-text>div:first-of-type,
+.women-text{
   background-color: #1b1a1aad;
-  padding: 15px;
-  padding-right: -5px;
+  padding: 1em;
+  padding-right: 0.35em;
+  height: 7rem;
+  overflow: hidden;
+  text-overflow: clip;
+}
+.women-text{
+  padding-top: 0.7rem;
 }
 .men-text>div:last-of-type{
   background-color: #d95363;
-  padding: 15px;
-  margin-top: 5px;
+  padding: 1rem;
+  margin-top: 0.35rem;
 }
 .men-text>div:last-of-type span{
-  display: inline-block;
   width: 100%;
+  font-family: 'Bodoni Moda', serif;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: clip;
 }
-.men-text span{
-  font-size: 0.8125em;
+.men-text span,
+.women-text span{
+  display: inline-block;
+  font-size: 0.7rem;
   text-transform: uppercase;
 }
 .women{
@@ -65,8 +93,18 @@
   grid-row-end: 2;
   overflow: hidden;
 }
+.women-text{
+  height: 5rem;
+}
+.women-text span{
+  font-size: 0.55rem;
+}
+.women-text h5{
+  font-size: 1.2rem;
+}
 .women>img{
   width: 100%;
+  object-fit: cover;
 }
 .kids{
   position: relative;
@@ -78,4 +116,59 @@
 }
 .kids>img{
   width: 100%;
+  object-fit: cover;
+}
+.baby-shop{
+  height: 23%;
+  width: 60%;
+  position: absolute;
+  top: 67%;
+  right: 0;
+  background-color: #05aecc;
+  color: #fff;
+}
+.baby-shop.d-flex{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.baby-shop span{
+  text-transform: capitalize;
+}
+.baby-shop>span:first-of-type{
+  flex-basis: 36%;
+  width: 100%;
+  font-size: 1rem;
+}
+.baby-shop .special,
+.baby-shop .trade{
+  flex-basis: 19%;
+  height: 100%;
+  width: 100%;
+  background-color: #00a1be;
+}
+.baby-shop .trade{
+  background-color: #f0626e;
+}
+.baby-shop .price{
+  flex-basis: 30%;
+  background-color: #323232;
+  height: 100%;
+  width: 100%;
+}
+.special.d-flex,
+.trade.d-flex,
+.price.d-flex{
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 768px) and (max-width: 992px){
+  :root{
+    font-size: 0.6em;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px){
+  :root{
+    font-size: 0.45em;
+  }
 }
