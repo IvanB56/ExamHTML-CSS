@@ -32,7 +32,7 @@
               <img src="img/special.png" alt="special"></a>
           </div>
           <div class="cart-block"><a class="d-flex" href="#">cart
-              <img src="img/trade.png" alt="trade"></a>
+              <img src="img/trade.png" alt="trade"#></a>
           </div>
         </div>
       </div>
@@ -576,7 +576,7 @@
 
     </header>
     <main class="container">
-      <article class="products container">
+      <article class="products">
         <div class="men">
             <img src="img/mens.gif" alt="mens">
             <div class="men-text">
@@ -602,21 +602,32 @@
         </div>
         <div class="kids">
           <img src="img/kids.gif" alt="kids">
+          <a href="#"></a>
           <div class="baby-shop d-flex">
             <span>baby shop</span>
             <div class="special d-flex">
-              <img src="img/special.png" alt="special">
+              <a class="d-flex" href="#"><img src="img/special.png" alt="special"></a>
             </div>
             <div class="trade d-flex">
-              <img src="img/trade.png" alt="trade">
+              <a title="add to cart" class="d-flex" href="#"><img src="img/trade.png" alt="trade"></a>
             </div>
             <div class="price d-flex">
               <span>$99.<sup>00</sup></span>
             </div>
           </div>
-          <a href="#"></a>
         </div>
-        <div class="search"></div>
+        <div class="search d-flex">
+            <form action="index.html" method="post">
+              <div class="row align-items-center">
+                <div class="col-10">
+                  <input class="search-text" type="text" name="search-text" placeholder="Search your product here ( e.g.: Silver diamond ring )">
+                </div>
+                  <div class="col-1">
+                    <button type="button" class="btn"></button>
+                  </div>
+              </div>
+            </form>
+        </div>
         <div class="crafts"></div>
         <div class="jewelry"></div>
       </article>

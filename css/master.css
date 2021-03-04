@@ -21,3 +21,26 @@ ul{
   padding: 0;
   margin: 0;
 }
+[title]{
+  position: relative;
+}
+[title]:after {
+    content: attr(title);
+    color: #333;
+    font-size: 1rem;
+    padding: .3em 0.5em;
+    border: 1px solid #f0626e;
+    border-radius: 5px;
+    background-color: #fff;
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+    bottom: 100%;
+    white-space: nowrap;
+    -webkit-transition: 0.25s linear opacity;
+    transition: 0.25s linear opacity;
+  }
+[title]:hover:after{
+  left: -50%;
+  opacity: 1;
+}

@@ -1,5 +1,8 @@
-.products.container{
-  margin-top: 15px;
+main.container{
+  min-width: 400px;
+}
+.products{
+  margin-top: 1em;
   display: grid;
   grid-template-columns: 6.8fr 5.2fr;
   grid-template-rows: 1.2fr 0.9fr 0.6fr 1.2fr;
@@ -7,8 +10,6 @@
   grid-gap: .35rem;
   justify-content: center;
   align-items: center;
-    /* TODO: удалить бэкграунд */
-  background-color: silver;
 }
 .container h5{
   font-family: 'Bodoni Moda', serif;
@@ -38,13 +39,10 @@
 .women-text{
   position: absolute;
   bottom: 10px;
-  width: 50%;
+  width: 60%;
   color: #fff;
   line-height: 1.2;
   box-sizing: border-box;
-}
-.women-text{
-  width: 60%;
 }
 .products a{
   position: absolute;
@@ -53,7 +51,6 @@
   display: inline-block;
   width: 100%;
   height: 100%;
-  z-index: 5;
 }
 .products a:hover{
   background-color: #0000008a;
@@ -61,7 +58,7 @@
 .men-text>div:first-of-type,
 .women-text{
   background-color: #1b1a1aad;
-  padding: 1em;
+  padding: 0.7em 1em;
   padding-right: 0.35em;
   height: 7rem;
   overflow: hidden;
@@ -135,6 +132,9 @@
   align-items: center;
   text-align: center;
 }
+.baby-shop.d-flex img{
+  width: 1.5rem;
+}
 .baby-shop span{
   text-transform: capitalize;
 }
@@ -158,12 +158,51 @@
   background-color: #323232;
   height: 100%;
   width: 100%;
+  font-size: 1.5rem;
 }
 .special.d-flex,
 .trade.d-flex,
 .price.d-flex{
   justify-content: center;
   align-items: center;
+}
+.special a,
+.trade a{
+  position: relative;
+  height: inherit;
+  width: inherit;
+  justify-content: center;
+  align-items: center;
+}
+
+.search{
+  background-color: #f0626e;
+  align-items: center;
+  justify-content: center;
+  max-height: 10rem;
+}
+.search form{
+  width: 100%;
+  height: 100%;
+  padding: 2.2em;
+}
+.search .row{
+  height: 3em;
+}
+.btn{
+  padding: 0;
+  width: 3em;
+  height: 3em;
+  background-image: url(../img/Search_btn.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+.search-text{
+  padding: 1.1rem;
+  width: 100%;
+  height: 100%;
+  font-size: .9rem;
 }
 @media screen and (min-width: 768px) and (max-width: 992px){
   :root{
@@ -172,6 +211,49 @@
 }
 @media screen and (min-width: 576px) and (max-width: 768px){
   :root{
-    font-size: 0.45em;
+    font-size: 0.55em;
   }
+  .women h5{
+    font-size: 1.1rem;
+  }
+  .baby-shop>span:first-of-type{
+    font-size: 0.7rem;
+  }
+  .baby-shop span{
+    font-size: 1rem;
+  }
+  .search form{
+    padding: 2em;
+  }
+}
+@media screen and (max-width: 576px){
+  button.navbar-toggler{
+    padding: .1rem 0.3rem;
+  }
+  :root{
+    font-size: .7em;
+
+  }
+  .products{
+    grid-template-columns: 1fr;
+    grid-column-gap: 0;
+  }
+  .men{
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .women{
+    grid-row-start: 2;
+    grid-column-start: 1;
+
+  }
+  .kids{
+    grid-row-start: 3;
+    grid-column-start: 1;
+  }
+  .search{
+    grid-row-start: 4;
+    max-height: 9rem;
+  }
+
 }
