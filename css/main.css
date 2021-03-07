@@ -1,3 +1,4 @@
+@import url(asside-style.css);
 main.container{
   min-width: 400px;
 }
@@ -104,6 +105,7 @@ main.container{
 }
 .women>img{
   width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 .kids{
@@ -116,6 +118,7 @@ main.container{
 }
 .kids>img{
   width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 .baby-shop{
@@ -184,7 +187,7 @@ main.container{
 .search form{
   width: 100%;
   height: 100%;
-  padding: 2.2em;
+  padding: 3.2em;
 }
 .search .row{
   height: 3em;
@@ -204,9 +207,105 @@ main.container{
   height: 100%;
   font-size: .9rem;
 }
+
+.crafts{
+  position: relative;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  overflow: hidden;
+}
+.crafts>img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.crafts-shop{
+  height: 18%;
+  width: 60%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: #fff;
+  background-color: #333333b8;
+}
+.crafts-shop.d-flex{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex: 0 0;
+}
+.crafts-shop.d-flex img{
+  width: 1.5rem;
+}
+.crafts-shop span{
+  text-transform: uppercase;
+}
+.crafts-shop>span:first-of-type{
+  flex-basis: 45%;
+  width: 100%;
+  font-size: 1.5rem;
+}
+.crafts-shop .special,
+.crafts-shop .trade{
+  flex-basis: 15%;
+  height: 100%;
+  width: 100%;
+  background-color: #00a1be;
+}
+.crafts-shop .trade{
+  background-color: #f0626e;
+}
+.crafts-shop .price{
+  flex-basis: 25%;
+  background-color: #323232;
+  height: 100%;
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+.jewelry{
+  position: relative;
+  grid-row-start: 3;
+  grid-row-end: 5;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  overflow: hidden;
+}
+.jewelry>img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.jewelry-text{
+  position: absolute;
+  transform: rotate(-90deg);
+  bottom: 20%;
+  left: calc(60% );
+  width: 60%;
+  height: 4rem;
+  color: #fff;
+  line-height: 1.2;
+  box-sizing: border-box;
+  background-color: #fff;
+  /* background-color: #3333337d; */
+  color: #fff;
+  padding: 0.75em;
+}
+.jewelry-text h5{
+  color: #333;
+  font-family: inherit;
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px){
   :root{
     font-size: 0.6em;
+  }
+  .search form{
+    width: 100%;
+    height: 100%;
+    padding: 1.5em;
   }
 }
 @media screen and (min-width: 576px) and (max-width: 768px){
@@ -223,7 +322,7 @@ main.container{
     font-size: 1rem;
   }
   .search form{
-    padding: 2em;
+    padding: 1em;
   }
 }
 @media screen and (max-width: 576px){
@@ -235,19 +334,22 @@ main.container{
 
   }
   .products{
+    grid-template-rows: repeat(auto-fill, minmax(3em, 1fr));
     grid-template-columns: 1fr;
     grid-column-gap: 0;
   }
   .men{
-    grid-row-start: 1;
-    grid-row-end: 2;
+    width: 100%;
+    grid-row: span 1;
   }
   .women{
+    width: 100%;
     grid-row-start: 2;
     grid-column-start: 1;
 
   }
   .kids{
+    width: 100%;
     grid-row-start: 3;
     grid-column-start: 1;
   }
@@ -255,5 +357,14 @@ main.container{
     grid-row-start: 4;
     max-height: 9rem;
   }
-
+  .search form{
+    padding: 1.5em;
+  }
+  .crafts{
+    grid-row-start: 5;
+  }
+  .jewelry{
+    grid-row-start: 6;
+    grid-column-start: 1;
+  }
 }

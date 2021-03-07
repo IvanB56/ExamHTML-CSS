@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+
+body{
+  margin: 0;
+  font-family: 'Arimo', sans-serif;
+  font-size: 28px;
+}
+
+header{
+  box-shadow: 2px 2px 4px #333;
+}
+
+header>*{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.logo{
+  width: 200px;
+}
+
+.my-navigation, .my-navigation ul{
+  list-style: none;
+  padding-left: 0;
+}
+
+.my-navigation>li{
+  display: inline-block;
+  margin-right: -10px;
+  position: relative;
+}
+
+.my-navigation a{
+  display: block;
+  text-decoration: none;
+  color: white;
+  background-color: #216333;
+  padding: 5px 10px;
+}
+
+.my-navigation .my-dropdown>ul{
+  display: none;
+  position: absolute;
+}
+
+.my-navigation .my-dropdown:hover>ul,
+.my-navigation .my-dropdown>ul:hover{
+  display: block;
+}
+
+.my-dropdown .my-dropdown>ul{
+  left: 100%;
+}
+
+.my-dropdown .my-dropdown>ul a{
+  background-color: #58B06F;
+}
+
+/* Таблица */
+
+.plans{
+  width: calc(100% - 60px);
+  margin: 15px 30px;
+  border-spacing: 0;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.plans tbody,
+.plans tfoot{
+  background-color: lightgrey;
+}
+
+.plans td{
+  text-align: center;
+  padding: 15px;
+  font-size: 28px;
+}
+
+.plans td:first-child{
+  text-align: left;
+}
+
+.plans td:nth-child(odd){
+  background-color: grey;
+}
+
+.plans tr:nth-child(even) td:nth-child(odd){
+  background-color: darkgrey;
+}
+
+.plans tr:nth-child(odd) td:nth-child(odd),
+.plans tr:nth-child(even) td:nth-child(even){
+  background-color: #c0c0c0;
+}
+
+.plans th{
+  padding: 50px 15px;
+  background-color: #88A4E4;
+  color: white;
+  font-size: 28px;
+}
+
+.plans th:nth-child(2){
+  background-color: #678DE4;
+}
+.plans th:nth-child(3){
+  background-color: #3662C9;
+}
+.plans th:nth-child(4){
+  background-color: #113483;
+}
+.plans th:nth-child(5){
+  background-color: black;
+}

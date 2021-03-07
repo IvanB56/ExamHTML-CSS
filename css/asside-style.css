@@ -1,0 +1,92 @@
+aside.slider-new h5,
+.slider-featured h5{
+  color: #00a1be;
+  text-transform: capitalize;
+  font-family: inherit;
+  letter-spacing: .1em;
+  font-weight: normal;
+  border-bottom: 1px solid #f0626e;
+  height: 3rem;
+  margin-bottom: -.55em;
+}
+aside.slider-new>.d-flex,
+.slider-featured>.d-flex{
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #b9b9b9;
+}
+.buttoms{
+  width: calc(6rem + 1px);
+  height: 4rem;
+}
+.buttoms>button{
+  box-sizing: border-box;
+  width: 49%;
+  height: 100%;
+  background-color: #3c3c3c;
+  border: 0;
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: lighter;
+  padding: 0;
+  margin-bottom: -3px;
+}
+.buttoms>button:hover{
+  background-color: #f0626e;
+}
+.buttoms.d-flex{
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.slide-block.d-flex{
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  flex-basis: 100%;
+}
+.slide-block.d-flex.mt-4{
+  border: 0;
+}
+.slide-img{
+  position: relative;
+  width: 100%;
+  flex-basis: 40%;
+  flex-shrink: 1;
+}
+.slide-img>img{
+  width: 100%;
+  object-fit: contain;
+}
+.slide-img .baby-shop{
+  height: 26%;
+  width: 80%;
+  top: 37%;
+  right: 10%;
+}
+.slide-img>a{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.slide-img>a:hover{
+  background-color: #090732b0;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px){
+  aside.slider-new h5,
+  .slider-featured h5{
+    margin-bottom: -.6em;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px){
+  aside.slider-new h5,
+  .slider-featured h5{
+    margin-bottom: -.6em;
+  }
+}
+@media screen and (max-width: 576px){
+  aside{
+    display: none;
+  }
+}
