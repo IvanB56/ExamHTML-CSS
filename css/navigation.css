@@ -13,9 +13,6 @@ nav{
   height: 100%;
   margin: 0;
 }
-.my-navbar li{
-  position: relative;
-}
 .my-navbar a{
   text-decoration: none;
   align-items: center;
@@ -162,6 +159,9 @@ nav.navbar{
   }
   nav{
     height: 50px;
+  }
+  .my-dropdown{
+    text-align: center;
   }
   .my-dropdown>ul{
     top: 55px;
