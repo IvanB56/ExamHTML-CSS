@@ -1,5 +1,6 @@
 aside.slider-new h5,
-aside.slider-featured h5{
+aside.slider-featured h5,
+aside.about-us h5{
   color: #00a1be;
   text-transform: capitalize;
   font-family: inherit;
@@ -10,7 +11,8 @@ aside.slider-featured h5{
   margin-bottom: -.55em;
 }
 .slider-new>.d-flex,
-.slider-featured>.d-flex{
+.slider-featured>.d-flex,
+.about-us>.d-flex{
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #b9b9b9;
@@ -123,14 +125,18 @@ aside.slider-featured h5{
 }
 
 .my-card-footer{
-  height: 3em;
+  height: 2.5rem;
   flex-grow: 1;
   flex-shrink: 2;
   align-items: center;
+  font-size: .9rem;
 }
 .my-card-footer>img{
   width: 1em;
   margin: auto;
+}
+.my-card-footer span{
+  font-size: 1.1rem;
 }
 .my-card-footer:last-of-type{
   background-color: #f0626e;
@@ -147,6 +153,84 @@ aside.slider-featured h5{
   background-color: #05aecc;
 }
 
+.shortcut{
+  position: absolute;
+  top: 1em;
+  left: 0;
+  width: 35%;
+  height: 1.75em;
+}
+.sale{
+  background-color: #f0626e;
+  text-transform: uppercase;
+}
+.new{
+  background-color: #05aecc;
+  text-transform: capitalize;
+}
+.shortcut .text{
+  font-size: 0.7rem;
+  color: #fff;
+}
+.shortcut.d-flex{
+  align-items: center;
+  justify-content: center;
+}
+.about-us .title{
+  padding: 1.5em 1em;
+}
+.about-us{
+  border-bottom: 1px solid #b9b9b9;
+}
+.about-us>div + div.d-flex{
+  border: 0;
+}
+.steps{
+  position: relative;
+  background-color: #434343;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #fff;
+  flex-grow: 1;
+  justify-content: space-around;
+  align-items: center;
+  display: block;
+  width: 30%;
+  padding: 0 2em;
+}
+.steps img{
+  height: 10rem;
+  width: 10rem;
+}
+.steps a{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+.steps a:hover{
+  background-color: #00000045;
+}
+.steps span{
+  font-size: 1.5rem;
+}
+.steps + div{
+  margin-left: 1rem;
+}
+.register{
+  background-color: #05aecc;
+}
+.checkout{
+  background: #f0626e;
+}
+.about-us .btn{
+  background-color: #05aecc;
+  border-radius: 0;
+  border: 0;
+  text-transform: capitalize;
+  font-size: 1.25rem;
+  color: #fff;
+}
 @media screen and (min-width: 768px) and (max-width: 992px){
   aside.slider-new h5,
   aside.slider-featured h5{
@@ -157,6 +241,9 @@ aside.slider-featured h5{
   aside.slider-new h5,
   aside.slider-featured h5{
     margin-bottom: -.6em;
+  }
+  .steps span{
+    font-size: 1rem;
   }
 }
 @media screen and (max-width: 576px){

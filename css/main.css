@@ -192,7 +192,7 @@ main.container{
 .search .row{
   height: 3em;
 }
-.btn{
+.search .btn{
   padding: 0;
   width: 3em;
   height: 3em;
