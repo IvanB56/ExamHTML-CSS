@@ -21,7 +21,7 @@ ul{
   padding: 0;
   margin: 0;
 }
-[title]{
+/* [title]{
   position: relative;
 }
 [title]:after {
@@ -44,4 +44,47 @@ ul{
 [title]:hover:after{
   left: -50%;
   opacity: 1;
+} */
+.trade{
+  position: relative;
+}
+.tooltipe{
+  display: none;
+  position: absolute;
+  height: 100%;
+  width: 100px;
+  top: -102%;
+  left: calc(50% - 50px);
+  border-radius: 5px;
+  border: 1px solid #f0626e;
+  background-color: #fff;
+  color: #000;
+  vertical-align: middle;
+}
+.trade:hover .tooltipe{
+  display: block;
+  z-index: 5;
+}
+.tooltipe.d-flex{
+  justify-content: center;
+  align-items: center;
+}
+.tooltipe::before{
+  position: absolute;
+  content: '';
+  height: 11px;
+  width: 11px;
+  bottom: -8px;
+  left: calc(50% - 11px);
+  border-bottom: 1px solid #f0626e;
+  border-right: 1px solid #f0626e;
+  background-image: linear-gradient(-45deg, #fff 0, #fff 50%, transparent 50%, transparent 100%);
+  transform-origin: right bottom;
+  transform: rotate(45deg);
+}
+@media screen and (min-width: 992px) {
+  .tooltipe{
+    height: 60%;
+    top: -62%;
+  }
 }

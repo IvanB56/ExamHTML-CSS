@@ -140,6 +140,7 @@ main.container{
 }
 .baby-shop span{
   text-transform: capitalize;
+  font-size: 1rem;
 }
 .baby-shop>span:first-of-type{
   flex-basis: 36%;
@@ -241,6 +242,7 @@ main.container{
 }
 .crafts-shop span{
   text-transform: uppercase;
+  font-size: 1rem;
 }
 .crafts-shop>span:first-of-type{
   flex-basis: 45%;
@@ -280,22 +282,52 @@ main.container{
 }
 .jewelry-text{
   position: absolute;
-  transform-origin: right center;
+  transform-origin: left bottom;
   transform: rotate(-90deg);
-  bottom: 50%;
-  right: 2rem;
+  bottom: 0;
+  right: -60%;
   width: 60%;
-  height: 4rem;
+  height: 5rem;
   color: #fff;
-  line-height: 1.2;
+  line-height: 1;
   box-sizing: border-box;
   background-color: #3333337d;
   padding: 0.75em;
 }
 .jewelry-text h5{
     color: #fff;
+    font-size: 1.8rem;
+    margin: 0;
+    padding: 0;
 }
-.jewelry-text::after{
+.jewelry-flag{
+  position: absolute;
+  bottom: 0;
+  right: 5%;
+  height: calc(100% + 1rem);
+  background-color: #ee6470;
+  width: 20%;
+  background-image: url(../img/arrow.png);
+  background-size: 70%;
+  background-position: center 60%;
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+.jewelry-text .arrow{
+  position: absolute;
+  top: -1rem;
+  right: 25%;
+  width: 0;
+  height: 0;
+  border-bottom: 1rem solid #ee6470;
+  border-left: 1rem solid transparent;
+  z-index: 1;
+}
+.jewelry-text.d-flex{
+  justify-content: flex-start;
+  align-items: center;
+}
+/* .jewelry-text::after{
   content: '';
   object-fit: cover;
   padding: 1rem 0;
@@ -321,10 +353,20 @@ main.container{
   position: absolute;
   transform: rotate(-45deg);
   background-image: linear-gradient(45deg, transparent, transparent 50%, #ee6470 50%, #ee6470);
+} */
+@media screen and (min-width: 1200px){
+  :root{
+    font-size: 1.3em;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px){
+  :root{
+    font-size: 1.1em;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 992px){
   :root{
-    font-size: 0.6em;
+    font-size: 0.7em;
   }
   .search form{
     width: 100%;
@@ -389,6 +431,18 @@ main.container{
   }
   .jewelry{
     grid-row-start: 6;
+    grid-area: 2;
     grid-column-start: 1;
   }
+  .price.d-flex span{
+    font-size: 1.5rem;
+  }
+  .jewelry-text{
+    width: 50%;
+    right: -50%;
+  }
+  .jewelry-text h5{
+    font-size: 2.2rem;
+  }
+
 }
